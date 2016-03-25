@@ -27,6 +27,11 @@ angular.module('myApp.cat', ['ngRoute'])
     new Cat('cat5', 'cats/img/cat5.jpg')];
   $scope.cat = $scope.cats[0];
 
+  $scope.selectCat = function (cat) {
+    $scope.cat = cat;
+    cat.wasSelected = true;
+  }
+
   $scope.findCat = function() {
     $scope.filterExpression = $scope.searchText;
   }
